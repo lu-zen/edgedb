@@ -27,6 +27,7 @@ Create access policy
         { allow | deny } <action> [, <action> ... ; ]
         [ using (<expr>) ; ]
         [ create annotation <annotation-name> := <value> ; ]
+        { set errmessage := <value> }
       "}"
     "}"
 
@@ -125,6 +126,9 @@ The following subcommands are allowed in the ``create access policy`` block:
     :eql:synopsis:`<value>`.
 
     See :eql:stmt:`create annotation` for details.
+
+:eql:synopsis:`{ set errmessage := <value> }`
+    Set access policy :eql:synopsis:`<errmessage>` to :eql:synopsis:`<value>`.
 
 Alter access policy
 ====================

@@ -54,6 +54,9 @@ commands <ref_eql_ddl_access_policies>`.
       [ when (<condition>) ]
       { allow | deny } <action> [, <action> ... ]
       [ using (<expr>) ]
+      "{"
+        [ errmessage := <error-message> ; ]
+      "}"
       [ <annotation-declarations> ] ;
 
     # where <action> is one of
@@ -147,6 +150,10 @@ The access policy declaration options are as follows:
 
     When omitted, it is assumed that this policy applies to all eligible
     objects of a given type.
+
+:eql:synopsis:`errmessage := <error_message>`
+    An optional string literal defining the error message
+    that is raised when the policy is violated.
 
 :sdl:synopsis:`<annotation-declarations>`
     Set access policy :ref:`annotation <ref_eql_sdl_annotations>`
